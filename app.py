@@ -25,6 +25,11 @@ class Room(db.Model):
 def load_user(user_id):
     return Player.query.get(int(user_id))
 
+@app.route('/')
+@login_required
+def home():
+    return redirect(url_for('choose_room'))
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -62,7 +67,6 @@ def choose_room():
         action = request.form['action']
         if action == 'create':
             if current_user.room_id:
-                # Leave the current room if the user is already in one
                 current_user.room_id = None
                 db.session.commit()
             room = Room(name=current_user.username + "'s Room")
