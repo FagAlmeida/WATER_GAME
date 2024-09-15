@@ -1,0 +1,50 @@
+/* styles.css */
+
+body {
+    background-color: #e0f7fa; /* Azul claro */
+    color: #000000; /* Preto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #00796b; /* Cor verde escuro */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40; /* Cor verde escuro quando em hover */
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #00796b;
+}
+
+a:hover {
+    text-decoration: underline;
+}
