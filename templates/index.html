@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Water Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Water Game</h1>
-    <p><a href="{{ url_for('login') }}">Login</a></p>
-    <p><a href="{{ url_for('register') }}">Register</a></p>
+    <div class="container">
+        <h1>Welcome to My App</h1>
+        <form method="POST" action="{{ url_for('choose_room') }}">
+            <button type="submit" name="action" value="create">Create Room</button>
+            <button type="submit" name="action" value="join">Join Room</button>
+        </form>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
 </body>
 </html>
